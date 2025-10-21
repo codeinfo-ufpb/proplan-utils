@@ -1,7 +1,7 @@
 # PROPLAN-UTILS - Biblioteca do Sistema de Dados UFPB
 <!-- Versão 1.0 - Mês: Outubro Ano: 2025 -->
 
-PROPLAN-UTILS - Biblioteca do Sistema de Dados UFPB é uma biblioteca criada com a forma modular desenvolvida utilizando python que tem como objetivo *unificar e padronizar os processos de engenharia, análise, tratamento, visualização e trabalho com dados institucionais da Universidade Federal da Paraíba, oferecendo componentes reutilizáveis para **Extrair, Transformar e Carregar dados (ETL/ELT), realizar integração com **bancos de dados relacionais e/ou não relacionais, dar suporte suporte a visualização de dados nas **operações de frontend*, bem como na visualização de dados ou quaisquer outros trabalhos que tenham como foco a manipulação de dados para gerações de informações para tomadas de decisões, ou ainda, na geração de conhecimento institucional. 
+PROPLAN-UTILS - Biblioteca do Sistema de Dados UFPB é uma biblioteca criada com a forma modular desenvolvida utilizando python que tem como objetivo **unificar e padronizar os processos de engenharia, análise, tratamento, visualização e trabalho com dados institucionais da Universidade Federal da Paraíba, oferecendo componentes reutilizáveis para Extrair, Transformar e Carregar dados (ETL/ELT), realizar integração com **bancos de dados relacionais e/ou não relacionais, dar suporte suporte a visualização de dados nas operações de frontend**, bem como na visualização de dados ou quaisquer outros trabalhos que tenham como foco a manipulação de dados para gerações de informações para tomadas de decisões, ou ainda, na geração de conhecimento institucional. 
 
 A premissa e foco do projeto foi estruturado na *reutilização, escalabilidade e clareza arquitetural*, utilizando as boas práticas do desenvolvimento, podendo ser aplicado em múltiplos datalakes, datawarehouses, pipelines de dados ou demais aplicações analíticas.
 
@@ -56,3 +56,4 @@ Seu escopo abrange:
 ## 🧩 *Forma da Arquitetura Modular*
 
 A forma que essa biblioteca foi pensada segue o princípio *"Separar, mas conectar"* — cada módulo possui responsabilidade única, mas se integra de forma padronizada, de modo a minimizar os aparecimentos de bugs, facilitar a manutenabilidade do código e escalar para possíveis melhorias futuras que forem acrescentadas ao código.
+
