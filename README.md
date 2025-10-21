@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # PROPLAN-UTILS - Biblioteca do Sistema de Dados UFPB
 <!-- Versão 1.0 - Mês: Outubro Ano: 2025 -->
 
@@ -57,6 +57,7 @@ Seu escopo abrange:
 ## 🧩 *Forma da Arquitetura Modular*
 
 A forma que essa biblioteca foi pensada segue o princípio *"Separar, mas conectar"* — cada módulo possui responsabilidade única, mas se integra de forma padronizada, de modo a minimizar os aparecimentos de bugs, facilitar a manutenabilidade do código e escalar para possíveis melhorias futuras que forem acrescentadas ao código.
+
 
 =======
 # PROPLAN-UTILS - Biblioteca do Sistema de Dados UFPB
@@ -117,4 +118,3 @@ Seu escopo abrange:
 ## 🧩 *Forma da Arquitetura Modular*
 
 A forma que essa biblioteca foi pensada segue o princípio *"Separar, mas conectar"* — cada módulo possui responsabilidade única, mas se integra de forma padronizada, de modo a minimizar os aparecimentos de bugs, facilitar a manutenabilidade do código e escalar para possíveis melhorias futuras que forem acrescentadas ao código.
->>>>>>> 4eed92a (Novas Pastas e Arquivos Adicionados ao Projeto da Biblioteca Python - PROPLAN)
