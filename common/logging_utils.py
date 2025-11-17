@@ -21,6 +21,7 @@ def get_logger(name: str = "etl", name_file: str = "pipeline", **kwargs) -> logg
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
 
+    # Impede que o logger adicione handlers duplicados em re-execuções
     if not logger.handlers:
         fmt = logging.Formatter(
             "%(asctime)s [%(name)s:%(lineno)d] %(levelname)s - %(message)s",

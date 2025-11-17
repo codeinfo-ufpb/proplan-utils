@@ -1,6 +1,10 @@
 
 import os
 import shutil
+import logging
+import sys
+from logging.handlers import RotatingFileHandler
+from datetime import datetime
 import zipfile
 from pathlib import Path
 from common.logging_utils import get_logger
@@ -8,8 +12,53 @@ from common.logging_utils import get_logger
 logger = get_logger("file-utils")
 
 # Diretório para enviar os arquivos excluídos. Caso não exista será criado.
-TRASH_DIR = Path("data/trash")
-TRASH_DIR.mkdir(exist_ok=True)
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+TRASH_DIR = ROOT_DIR / "data" / "trash"
+TRASH_DIR.mkdir(parents=True, exist_ok=True)
+
+def get_logger(name: str = "etl", name_file: str = "pipeline", **kwargs) -> logging.Logger:
+    """
+    Cria e configura um logger robusto para uso corporativo.
+    - Registra logs tanto no console quanto em arquivo (rotativo).
+    """
+    LOG_DIR = Path("logs")
+    LOG_DIR.mkdir(exist_ok=True)
+
+    # Nome do arquivo de log: logs/pipeline_YYYY-MM-DD.log
+    date_suffix = datetime.now().strftime("%Y-%m-%d")
+    log_file = LOG_DIR / f"{name_file}_{date_suffix}.log"
+
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.INFO)
+    
+    # CRÍTICO: Impede que as mensagens se propaguem para o logger raiz, 
+    # garantindo que nossos handlers de arquivo personalizados sejam usados.
+    logger.propagate = False 
+
+    # Impede que o logger adicione handlers duplicados em re-execuções
+    if not logger.handlers:
+        fmt = logging.Formatter(
+            "%(asctime)s [%(name)s:%(lineno)d] %(levelname)s - %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S"
+        )
+
+        # Console handler (saída padrão)
+        stream_handler = logging.StreamHandler(sys.stdout)
+        stream_handler.setFormatter(fmt)
+        logger.addHandler(stream_handler)
+
+        # Arquivo rotativo (File Handler)
+        file_handler = RotatingFileHandler(
+            filename=log_file,
+            maxBytes=1 * 1024 * 1024,
+            backupCount=5,
+            encoding="utf-8"
+        )
+        file_handler.setFormatter(fmt)
+        logger.addHandler(file_handler)
+        
+    return logger
+
 
 def move_to_trash(file_path: str):
     """

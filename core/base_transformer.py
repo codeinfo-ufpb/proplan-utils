@@ -46,7 +46,9 @@ class BaseTransformer(ABC):
         """
         self.logger.info("[STATUS] Iniciando transformação de dados...")
         self.validate_input(df)
+
         transformed_df = self.transform(df)
+        
         self.validate_output(transformed_df)
         self.logger.info("[OK] Transformação concluída com sucesso.")
         return transformed_df

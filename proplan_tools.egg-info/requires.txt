@@ -2,3 +2,8 @@ pandas
 sqlalchemy
 python-dotenv
 setuptools
+////////////////////////////////
+Params  - Data d/m/a
+//---
+
+

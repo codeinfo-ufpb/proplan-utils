@@ -2,11 +2,13 @@ Metadata-Version: 2.4
 Name: proplan-tools
 Version: 1.0
 Summary: Biblioteca Modular para integração, formatação, extração e normalização de dados na área de informação, ciência de dados e inteligência da PROPLAN/UFPB
-Author: PROPLAN CODEINFO
+Author: Sullivan Lima
 Requires-Dist: pandas
 Requires-Dist: sqlalchemy
 Requires-Dist: python-dotenv
 Requires-Dist: setuptools
+Requires-Dist: psycopg2
+Requires-Dist: numpy
 Dynamic: author
 Dynamic: requires-dist
 Dynamic: summary

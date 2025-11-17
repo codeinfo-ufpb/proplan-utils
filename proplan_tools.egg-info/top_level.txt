@@ -1,5 +1,8 @@
+common
+config
 core
 databases
 etl
 frontend
+tests
 utils
