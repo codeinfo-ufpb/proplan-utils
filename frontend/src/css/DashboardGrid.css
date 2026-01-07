@@ -1,0 +1,281 @@
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+  min-height: 350px; 
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+} 
+
+.chart-block {
+  background: white;
+  border: 1px solid var(--cinza-ufpb-borda);
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+/* Cards */
+.card-dashboard {
+  background: #fff;
+  border: 1px solid var(--cinza-ufpb-borda);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  height: 500px; 
+}
+
+.card-dashboard-small {
+  background: #fff;
+  border: 1px solid var(--cinza-ufpb-borda);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  height: 450px; 
+}
+
+/* Área onde o hover será detectado */
+.card-dashboard-small:hover .chart-actions,
+.card-dashboard:hover .chart-actions {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ajuste dos botões */
+
+.chart-actions button {
+  background: #f0f0f0;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.chart-actions button:hover {
+  background: #ddd;
+}
+
+.larger{
+  height: 800px;
+}
+
+/* --- CARD GRANDE (Gráfico dos meses) --- */
+
+.card-dashboard.larger {
+  height: 800px; /* mantém seu tamanho desejado */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Área da parte de cima (header + botões etc.) fica no tamanho natural */
+.card-dashboard.larger .card-header,
+.card-dashboard.larger .subinfo,
+.card-dashboard.larger .month-buttons {
+  flex-shrink: 0;
+}
+
+/* Área onde o gráfico fica */
+.card-dashboard.larger .card-body {
+  flex: 1;                     /* ocupa todo espaço restante */
+  display: flex;
+  justify-content: center;     /* centraliza horizontal */
+  align-items: center;         /* centraliza vertical */
+  overflow: hidden;            /* impede o gráfico de vazar do card */
+  padding: 10px;               /* respiro interno */
+}
+
+.card-dashboard.larger .chart-container {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+.card-header {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--cinza-ufpb-borda);
+  padding: 8px 0 8px 8px;
+  background: var(--cinza-ufpb-borda);
+}
+
+.subinfo{
+  align-items: right;
+  align-self: right;
+}
+
+
+.card-header .subinfo {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Botão de fullscreen */
+.fullscreen-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  background: none;
+  border: none;
+  padding: 0 6px;
+  color: #444;
+}
+
+.export-buttons {
+  display: inline-flex;
+  gap: 6px;
+  margin-left: 12px;
+}
+
+.export-buttons button {
+  background: #f0f0f0;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.export-buttons button:hover {
+  background: #ddd;
+}
+
+.fullscreen-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+  background: none;
+  border: none;
+  padding: 0 6px;
+  color: #444;
+}
+
+.fullscreen-btn:hover {
+  color: #000;
+}
+
+.fullscreen-chart {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999;
+  background: #fff;
+  padding: 20px;
+  overflow: auto;
+}
+
+.fullscreen-chart .card-body {
+  height: calc(100vh - 80px) !important;
+}
+
+.fullscreen-chart .chart-container {
+  height: 100% !important;
+}
+
+.month-buttons {
+  margin: 10px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.month-buttons button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f3f3f3;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.month-buttons button:hover {
+  background: #e7e7e7;
+}
+
+.month-buttons button.active {
+  background: #4287f5;
+  color: white;
+  border-color: #4287f5;
+}
+
+
+
+/* Desktop */
+@media (min-width: 992px) {
+  .chart-large {
+    width: 66.666%;
+    
+  }
+
+  .chart-small {
+    width: 33.333%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .chart-large,
+  .chart-small {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+
+  /* Grid vira 1 coluna */
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards ocupam toda a largura */
+  .chart-large,
+  .chart-small,
+  .card-dashboard,
+  .card-dashboard-small {
+    width: 100% !important;
+  }
+
+  /* Remove alturas fixas */
+  .card-dashboard,
+  .card-dashboard-small,
+  .card-dashboard.larger {
+    height: auto !important;
+    min-height: 320px;
+  }
+
+  /* Centralização e contenção */
+  .chart-container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .chart-container canvas,
+  .chart-container svg {
+    max-width: 100% !important;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .chart-large {
+    grid-column: span 8;
+  }
+  .chart-small {
+    grid-column: span 4;
+  }
+}
+

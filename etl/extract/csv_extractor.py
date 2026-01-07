@@ -71,7 +71,7 @@ class CSVExtractor(BaseExtractor):
                     continue
 
                 # Definição da linha 3 (índice 2) onde contém as colunas principais.
-                header_row = df_temp.iloc[2] 
+                header_row = df_temp.iloc[5] 
                 
                 # Os dados começam na linha 5 (índice 4)
                 df = df_temp.iloc[4:].copy()
@@ -135,7 +135,7 @@ class CSVExtractor(BaseExtractor):
                     header_row = df_temp.iloc[2]
                     
                     # Usamos a linha 4 (índice 3) em diante como dados. Ajustável de acordo com a realidade de observação do arquivo.
-                    df = df_temp[3:].copy()
+                    df = df_temp[8:].copy()
                     
                     # Damos o nome do cabeçalho
                     df.columns = [str(col) if pd.notna(col) else f'Unnamed:{i}' for i, col in enumerate(header_row)]

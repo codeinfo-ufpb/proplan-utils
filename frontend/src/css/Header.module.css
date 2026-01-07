@@ -1,0 +1,55 @@
+.topBar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-ufpb-principal);
+  border-bottom: solid 0.25rem var(--dourado-borda);
+  color: #fff;
+  padding: 10px 30px;
+}
+
+.topBar h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+}
+
+.logo > img{
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--cor-bg);
+  padding: 1rem 0 0.7rem 0;
+  border-bottom: 1px solid var(--cor-borda);
+  transition: all 0.25s ease;
+}
+
+.bgHeader{
+  background-image: linear-gradient(var(--azul-ufpb-principal), var(--cinza-ufpb-fundo-secundario));
+  opacity: 0.9;
+  border-bottom: var(--dourado-borda) solid 2px;  
+}
+ 
+.relative{
+  position: relative;
+} 
+
+.absolute{
+  position: absolute;
+}
+
+
+

@@ -1,0 +1,120 @@
+/* Wrapper geral */
+.wrapper {
+  width: 100%;
+  background: var(--cinza-prateado-ufpb-secundario);
+  border-bottom: 2px solid var(--dourado-borda);
+  padding: 10px 15px;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;              
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  animation: slideDown .25s ease-out;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão Mobile Toggle */
+.toggleBtn {
+  display: none;
+  width: 100%;
+  padding: 12px;
+  background: var(--azul-ufpb-secundario);
+  color: var(--branco-padrao);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.toggleBtn:hover {
+  filter: brightness(1.1);
+}
+
+/* Contêiner dos filtros */
+.filtrosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Animação de abrir/fechar */
+.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.hide {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Itens */
+.filtroItem {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+/* Estilos padrões */
+.filtroItem label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #003366;
+}
+
+/* INPUTS */
+.filtroItem select {
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Botão reset */
+.btnReset {
+  padding: 7px 12px;
+  border: 1px solid var(--dourado-metalico-ufpb);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background: var(--branco-padrao);
+  transition: 0.2s;
+}
+
+.btnReset:hover {
+  background: var(--azul-ufpb-secundario);
+  color: var(--branco-padrao);
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 368px) {
+  .toggleBtn {
+    display: block;
+  }
+
+  .filtrosContainer {
+    flex-direction: column;
+  }
+
+  .filtroItem {
+    width: 100%;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

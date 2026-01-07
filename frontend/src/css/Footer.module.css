@@ -1,0 +1,17 @@
+/* .borderT{
+    background: var(--azul-padrao);
+}
+
+@media (min-width: 768px) {
+    .gridCols1{
+        grid-template-columns: repeat(4, minMax(0, 1fr));
+    }
+}
+
+.gap8{
+    gap: 2rem;
+}
+
+.grid{
+    display: grid;
+} */

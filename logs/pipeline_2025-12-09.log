@@ -1,0 +1,410 @@
+2025-12-09 13:55:20 [email-extractor:106] INFO - [STATUS] Iniciando a extração dos anexos do e-mail...
+2025-12-09 13:55:20 [email-extractor:121] INFO - [INFO] A busca dos anexos nos e-mails data do período desde: 09/11/2025.
+2025-12-09 13:55:20 [email-extractor:122] INFO - [INFO] Na Pasta IMAP alvo: 'INBOX'. As Palavras-Chave de Assunto são: ['teste - planilha', 'relatório', 'teste', 'dw_teste']
+2025-12-09 13:55:20 [email-extractor:134] INFO - [OK] Conexão IMAP bem-sucedida e pasta 'INBOX' selecionada.
+2025-12-09 13:55:20 [email-extractor:139] INFO - [INFO] Critérios de busca IMAP (apenas data e remetente): (SINCE "09-Nov-2025" FROM "adm.sullivanslima@gmail.com")
+2025-12-09 13:55:20 [email-extractor:147] INFO - [INFO] 4 e-mail(s) encontrados na busca IMAP inicial.
+2025-12-09 13:55:20 [email-extractor:163] INFO - [INFO] Processando UID 9: Assunto: Planilha - Historico financeiro - teste, De:a
+2025-12-09 13:55:20 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 13:55:20 [email-extractor:163] INFO - [INFO] Processando UID 10: Assunto: Teste Xlsx - Planilha financeira, De:a
+2025-12-09 13:55:20 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 13:55:21 [email-extractor:163] INFO - [INFO] Processando UID 11: Assunto: Teste - Planilha auxilios alunos, De:a
+2025-12-09 13:55:21 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\relatorio-auxilio-estudantil.xlsx
+2025-12-09 13:55:21 [email-extractor:163] INFO - [INFO] Processando UID 12: Assunto: Teste - PLanilha, De:a
+2025-12-09 13:55:21 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\BD_Execucao dos RAP.xlsx
+2025-12-09 13:55:21 [email-extractor:227] INFO - [OK] A extração foi concluída com sucesso. Temos 4 arquivo(s) processado(s).
+2025-12-09 13:55:21 [email-extractor:242] INFO - [OK] Realizado a saída do processo. IMAP bem-sucedido!
+2025-12-09 13:59:08 [csv-extractor:27] INFO - [INFO] Pasta de destino ('incoming') verificada/criada em: data\incoming
+2025-12-09 13:59:08 [csv-extractor:106] INFO - [INFO] Encontrados 4 arquivo(s) na pasta de origem (data\emails).
+2025-12-09 13:59:08 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 13:59:14 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 13:59:14 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: BD_Execucao dos RAP.xlsx — 22701 linhas.
+2025-12-09 13:59:14 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: BD_Execucao dos RAP.xlsx
+2025-12-09 13:59:14 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 13:59:19 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 13:59:19 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: relatorio-auxilio-estudantil.xlsx — 83831 linhas.
+2025-12-09 13:59:19 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: relatorio-auxilio-estudantil.xlsx
+2025-12-09 13:59:19 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 13:59:23 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 13:59:23 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Despesas.xlsx — 25790 linhas.
+2025-12-09 13:59:23 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 13:59:23 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 13:59:23 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 13:59:23 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Histórico.xlsx — 3717 linhas.
+2025-12-09 13:59:23 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:00:11 [csv-extractor:27] INFO - [INFO] Pasta de destino ('incoming') verificada/criada em: data\incoming
+2025-12-09 14:00:11 [extract-manager:37] INFO - [INFO] Gerenciador de Extração inicializado. Destino final: data\processed
+2025-12-09 14:00:11 [extract-manager:70] INFO - [STATUS] Iniciando o pipeline de extração...
+2025-12-09 14:00:11 [email-extractor:106] INFO - [STATUS] Iniciando a extração dos anexos do e-mail...
+2025-12-09 14:00:11 [email-extractor:121] INFO - [INFO] A busca dos anexos nos e-mails data do período desde: 09/11/2025.
+2025-12-09 14:00:11 [email-extractor:122] INFO - [INFO] Na Pasta IMAP alvo: 'INBOX'. As Palavras-Chave de Assunto são: ['teste - planilha', 'relatório', 'teste', 'dw_teste']
+2025-12-09 14:00:11 [email-extractor:134] INFO - [OK] Conexão IMAP bem-sucedida e pasta 'INBOX' selecionada.
+2025-12-09 14:00:11 [email-extractor:139] INFO - [INFO] Critérios de busca IMAP (apenas data e remetente): (SINCE "09-Nov-2025" FROM "adm.sullivanslima@gmail.com")
+2025-12-09 14:00:11 [email-extractor:147] INFO - [INFO] 4 e-mail(s) encontrados na busca IMAP inicial.
+2025-12-09 14:00:11 [email-extractor:163] INFO - [INFO] Processando UID 9: Assunto: Planilha - Historico financeiro - teste, De:a
+2025-12-09 14:00:11 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:00:11 [email-extractor:163] INFO - [INFO] Processando UID 10: Assunto: Teste Xlsx - Planilha financeira, De:a
+2025-12-09 14:00:11 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:00:12 [email-extractor:163] INFO - [INFO] Processando UID 11: Assunto: Teste - Planilha auxilios alunos, De:a
+2025-12-09 14:00:12 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:00:12 [email-extractor:163] INFO - [INFO] Processando UID 12: Assunto: Teste - PLanilha, De:a
+2025-12-09 14:00:13 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\BD_Execucao dos RAP.xlsx
+2025-12-09 14:00:13 [email-extractor:227] INFO - [OK] A extração foi concluída com sucesso. Temos 4 arquivo(s) processado(s).
+2025-12-09 14:00:13 [email-extractor:242] INFO - [OK] Realizado a saída do processo. IMAP bem-sucedido!
+2025-12-09 14:00:13 [extract-manager:77] INFO - [AVISO²] 4 arquivos extraídos do e-mail.
+2025-12-09 14:00:13 [csv-extractor:106] INFO - [INFO] Encontrados 4 arquivo(s) na pasta de origem (data\emails).
+2025-12-09 14:00:13 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:00:19 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:00:19 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: BD_Execucao dos RAP.xlsx — 22701 linhas.
+2025-12-09 14:00:19 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: BD_Execucao dos RAP.xlsx
+2025-12-09 14:00:19 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:00:24 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:00:24 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: relatorio-auxilio-estudantil.xlsx — 83831 linhas.
+2025-12-09 14:00:24 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:00:24 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:00:28 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:00:28 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Despesas.xlsx — 25790 linhas.
+2025-12-09 14:00:28 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:00:28 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:00:28 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:00:28 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Histórico.xlsx — 3717 linhas.
+2025-12-09 14:00:28 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:00:28 [extract-manager:84] INFO - [AVISO²] 4 DataFrames processados e prontos para a Transformação.
+2025-12-09 14:00:28 [extract-manager:43] INFO - [INFO] Iniciando a movimentação dos arquivos de 'data\incoming' para 'data\processed'.
+2025-12-09 14:00:28 [extract-manager:63] INFO - [STATUS] 4 arquivos movidos de 'incoming' para 'processed'.
+2025-12-09 14:00:28 [extract-manager:89] INFO - [OK] O Pipeline de Extração foi concluído com sucesso! Total de DataFrames construídos: 4
+2025-12-09 14:00:53 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:00:53 [csv-transformer:138] WARNING - [AVISO] Cabeçalho não encontrado automaticamente, usando linha 3.
+2025-12-09 14:00:59 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (22701, 1)
+2025-12-09 14:00:59 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:00:59 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:00:59 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:00:59 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:00:59 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:00:59 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:00:59 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:00:59 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:00:59 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (22701, 1)
+2025-12-09 14:00:59 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:00:59 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: BD_Execucao dos RAP.xlsx
+2025-12-09 14:00:59 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+       Filtro do relatório:
+0                      2023
+1                      2023
+2                      2023
+3                      2023
+4                      2023
+...                     ...
+22696                  2025
+22697                  2025
+22698                  2025
+22699                  2025
+22700                  2025
+
+[22701 rows x 1 columns]
+2025-12-09 14:00:59 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:00:59 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:01:05 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (83831, 8)
+2025-12-09 14:01:05 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:01:05 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:01:05 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:01:05 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:01:06 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:01:06 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:01:06 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:01:06 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:01:06 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (83831, 8)
+2025-12-09 14:01:06 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:01:06 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:01:06 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+       Ano Lançamento      OB - Lista Credores  OB/LC - Sequencial  OB/LC - Favorecido           PI Mês Lançamento  OB/LC - Valor  Movim. Líquido - R$ (Conta Contábil)
+0                2025  153065152312024LC404139                 1.0        1.055204e+10  M0000G21B3N       JAN/2025          700.0                             1120000.0
+1                2025                     <NA>                 2.0        9.290461e+09  M0000G21B3N       JAN/2025          700.0                             1120000.0
+2                2025                     <NA>                 3.0        1.808975e+09  M0000G21B3N       JAN/2025          700.0                             1120000.0
+3                2025                     <NA>                 4.0        1.186760e+10  M0000G21B3N       JAN/2025          700.0                             1120000.0
+4                2025                     <NA>                 5.0        1.026962e+10  M0000G21B3N       JAN/2025          700.0                             1120000.0
+...               ...                      ...                 ...                 ...          ...            ...            ...                                   ...
+83826            2025                     <NA>                15.0        7.792610e+09  L0000P01N0N       OUT/2025           40.0                               14440.0
+83827            2025                     <NA>                16.0        2.757522e+10  L0000P01N0N       OUT/2025           40.0                               14440.0
+83828            2025                     <NA>                17.0        2.757522e+10  L0000P01N0N       OUT/2025           40.0                               14440.0
+83829            2025                     <NA>                18.0        2.757522e+10  L0000P01N0N       OUT/2025           40.0                               14440.0
+83830            2025                     <NA>                19.0        5.275863e+09  L0000P01N0N       OUT/2025           40.0                               14440.0
+
+[83831 rows x 8 columns]
+2025-12-09 14:01:06 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:01:06 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:01:10 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (25790, 15)
+2025-12-09 14:01:10 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:01:10 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:01:10 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:01:10 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:01:10 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:01:10 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:01:10 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:01:10 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:01:10 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (25790, 15)
+2025-12-09 14:01:10 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:01:10 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:01:10 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+       Ano Lançamento  Unidade Orçamentária  Resultado Primário Lei Ação Governo  Plano Orçamentário  UG Executora  UG Responsável  ...  Natureza Despesa Detalhada Item Informação    13    19    23    25    28
+0                2020               26240.0                     2.0         <NA>             26240.0      153065.0          150654  ...                        <NA>               6  2426  6537  7578  5663  5496
+1                2020               26240.0                     2.0         <NA>             26240.0      153065.0          150654  ...                        <NA>               6  2427  6538  7579  5664  5497
+2                2025               26240.0                     2.0         4256             26240.0      153065.0          150656  ...                    339020-9              -9     0  5193    22     0     0
+3                2025               26240.0                     2.0         4256             26240.0      153065.0          150656  ...                    339020-9               8     0  1297    22     0     0
+4                2025               26240.0                     2.0         4256             26240.0      153065.0          150656  ...                    33902001              -9     0  3435    22  4205  4101
+...               ...                   ...                     ...          ...                 ...           ...             ...  ...                         ...             ...   ...   ...   ...   ...   ...
+25785            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    339048-9              -9     0  5202    22     0     0
+25786            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    339048-9               8     0  1285    22     0     0
+25787            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    33904801              -9     0  3435    22  3313  3248
+25788            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    33904801               8     0  3435  5734     0     0
+25789            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    339147-9              -9     0  3435    22     0     0
+
+[25790 rows x 15 columns]
+2025-12-09 14:01:10 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:01:10 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:01:11 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (3717, 7)
+2025-12-09 14:01:11 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:01:11 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:01:11 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:01:11 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:01:11 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:01:11 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:01:11 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:01:11 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:01:11 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (3717, 7)
+2025-12-09 14:01:11 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:01:11 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:01:11 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+      Ano Lançamento Mês Lançamento  Resultado Lei Ação Governo  Item Informação   13    23
+0               2020           <NA>              2         <NA>                3  0.0  1997
+1               2020           <NA>              2         <NA>                3  0.0  1998
+2               2025       JAN/2025              0         09HB                1  0.0  1977
+3               2025       JAN/2025              1         00S6                1  0.0    97
+4               2025       JAN/2025              1         0181                1  0.0  1981
+...              ...            ...            ...          ...              ...  ...   ...
+3712            2015       014/2015              2         4572                4  0.0    97
+3713            2015       014/2015              2         4572                3  0.0    97
+3714            2015       014/2015              2         8282                4  0.0    97
+3715            2015       014/2015              2         8282                3  0.0    97
+3716            2015       014/2015              6         8282                4  0.0    97
+
+[3717 rows x 7 columns]
+2025-12-09 14:01:11 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:01:11 [test-transformer:41] INFO - [INFO] Teste de transformação concluído.
+2025-12-09 14:01:41 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:01:47 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (53 colunas processadas).
+2025-12-09 14:01:47 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\BD_Execucao dos RAP.json
+2025-12-09 14:01:47 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:01:52 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (10 colunas processadas).
+2025-12-09 14:01:52 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\relatorio-auxilio-estudantil.json
+2025-12-09 14:01:52 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:01:56 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (29 colunas processadas).
+2025-12-09 14:01:56 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\Relatório painel orçamentário - Despesas.json
+2025-12-09 14:01:56 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:01:56 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (10 colunas processadas).
+2025-12-09 14:01:56 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\Relatório painel orçamentário - Histórico.json
+2025-12-09 14:15:22 [email-extractor:106] INFO - [STATUS] Iniciando a extração dos anexos do e-mail...
+2025-12-09 14:15:22 [email-extractor:121] INFO - [INFO] A busca dos anexos nos e-mails data do período desde: 09/11/2025.
+2025-12-09 14:15:22 [email-extractor:122] INFO - [INFO] Na Pasta IMAP alvo: 'INBOX'. As Palavras-Chave de Assunto são: ['teste - planilha', 'relatório', 'teste', 'dw_teste']
+2025-12-09 14:15:22 [email-extractor:134] INFO - [OK] Conexão IMAP bem-sucedida e pasta 'INBOX' selecionada.
+2025-12-09 14:15:22 [email-extractor:139] INFO - [INFO] Critérios de busca IMAP (apenas data e remetente): (SINCE "09-Nov-2025" FROM "adm.sullivanslima@gmail.com")
+2025-12-09 14:15:22 [email-extractor:147] INFO - [INFO] 4 e-mail(s) encontrados na busca IMAP inicial.
+2025-12-09 14:15:22 [email-extractor:163] INFO - [INFO] Processando UID 9: Assunto: Planilha - Historico financeiro - teste, De:a
+2025-12-09 14:15:22 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:15:23 [email-extractor:163] INFO - [INFO] Processando UID 10: Assunto: Teste Xlsx - Planilha financeira, De:a
+2025-12-09 14:15:23 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:15:23 [email-extractor:163] INFO - [INFO] Processando UID 11: Assunto: Teste - Planilha auxilios alunos, De:a
+2025-12-09 14:15:23 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:15:24 [email-extractor:163] INFO - [INFO] Processando UID 12: Assunto: Teste - PLanilha, De:a
+2025-12-09 14:15:24 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\BD_Execucao dos RAP.xlsx
+2025-12-09 14:15:24 [email-extractor:227] INFO - [OK] A extração foi concluída com sucesso. Temos 4 arquivo(s) processado(s).
+2025-12-09 14:15:24 [email-extractor:242] INFO - [OK] Realizado a saída do processo. IMAP bem-sucedido!
+2025-12-09 14:15:41 [csv-extractor:27] INFO - [INFO] Pasta de destino ('incoming') verificada/criada em: data\incoming
+2025-12-09 14:15:41 [csv-extractor:106] INFO - [INFO] Encontrados 4 arquivo(s) na pasta de origem (data\emails).
+2025-12-09 14:15:41 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:15:48 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:15:48 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: BD_Execucao dos RAP.xlsx — 22696 linhas.
+2025-12-09 14:15:48 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: BD_Execucao dos RAP.xlsx
+2025-12-09 14:15:48 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:15:53 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:15:53 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: relatorio-auxilio-estudantil.xlsx — 83826 linhas.
+2025-12-09 14:15:53 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:15:53 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:15:58 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:15:58 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Despesas.xlsx — 25785 linhas.
+2025-12-09 14:15:58 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:15:58 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:15:58 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:15:58 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Histórico.xlsx — 3712 linhas.
+2025-12-09 14:15:58 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:16:51 [csv-extractor:27] INFO - [INFO] Pasta de destino ('incoming') verificada/criada em: data\incoming
+2025-12-09 14:16:51 [extract-manager:37] INFO - [INFO] Gerenciador de Extração inicializado. Destino final: data\processed
+2025-12-09 14:16:51 [extract-manager:70] INFO - [STATUS] Iniciando o pipeline de extração...
+2025-12-09 14:16:51 [email-extractor:106] INFO - [STATUS] Iniciando a extração dos anexos do e-mail...
+2025-12-09 14:16:51 [email-extractor:121] INFO - [INFO] A busca dos anexos nos e-mails data do período desde: 09/11/2025.
+2025-12-09 14:16:51 [email-extractor:122] INFO - [INFO] Na Pasta IMAP alvo: 'INBOX'. As Palavras-Chave de Assunto são: ['teste - planilha', 'relatório', 'teste', 'dw_teste']
+2025-12-09 14:16:51 [email-extractor:134] INFO - [OK] Conexão IMAP bem-sucedida e pasta 'INBOX' selecionada.
+2025-12-09 14:16:51 [email-extractor:139] INFO - [INFO] Critérios de busca IMAP (apenas data e remetente): (SINCE "09-Nov-2025" FROM "adm.sullivanslima@gmail.com")
+2025-12-09 14:16:51 [email-extractor:147] INFO - [INFO] 4 e-mail(s) encontrados na busca IMAP inicial.
+2025-12-09 14:16:51 [email-extractor:163] INFO - [INFO] Processando UID 9: Assunto: Planilha - Historico financeiro - teste, De:a
+2025-12-09 14:16:51 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:16:52 [email-extractor:163] INFO - [INFO] Processando UID 10: Assunto: Teste Xlsx - Planilha financeira, De:a
+2025-12-09 14:16:52 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:16:52 [email-extractor:163] INFO - [INFO] Processando UID 11: Assunto: Teste - Planilha auxilios alunos, De:a
+2025-12-09 14:16:52 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:16:53 [email-extractor:163] INFO - [INFO] Processando UID 12: Assunto: Teste - PLanilha, De:a
+2025-12-09 14:16:53 [email-extractor:207] INFO - [OK] Anexo salvo: data\emails\BD_Execucao dos RAP.xlsx
+2025-12-09 14:16:53 [email-extractor:227] INFO - [OK] A extração foi concluída com sucesso. Temos 4 arquivo(s) processado(s).
+2025-12-09 14:16:53 [email-extractor:242] INFO - [OK] Realizado a saída do processo. IMAP bem-sucedido!
+2025-12-09 14:16:53 [extract-manager:77] INFO - [AVISO²] 4 arquivos extraídos do e-mail.
+2025-12-09 14:16:53 [csv-extractor:106] INFO - [INFO] Encontrados 4 arquivo(s) na pasta de origem (data\emails).
+2025-12-09 14:16:53 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:16:59 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:16:59 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: BD_Execucao dos RAP.xlsx — 22696 linhas.
+2025-12-09 14:16:59 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: BD_Execucao dos RAP.xlsx
+2025-12-09 14:16:59 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:17:04 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:17:04 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: relatorio-auxilio-estudantil.xlsx — 83826 linhas.
+2025-12-09 14:17:04 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:17:04 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:17:07 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:17:07 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Despesas.xlsx — 25785 linhas.
+2025-12-09 14:17:07 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:17:07 [csv-extractor:130] INFO - [INFO] Lendo Excel/XLSX/XLS. Tentativa 1: cabeçalho na linha 3 (índice 2)... Parametrizado por observação
+2025-12-09 14:17:07 [csv-extractor:143] INFO - [OK] Excel lido com cabeçalho da linha 3. Colunas setadas manualmente.
+2025-12-09 14:17:07 [csv-extractor:165] INFO - [OK] Arquivo carregado e normalizado com sucesso: Relatório painel orçamentário - Histórico.xlsx — 3712 linhas.
+2025-12-09 14:17:07 [csv-extractor:171] INFO - [INFO] Arquivo movido para a pasta incoming: Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:17:07 [extract-manager:84] INFO - [AVISO²] 4 DataFrames processados e prontos para a Transformação.
+2025-12-09 14:17:07 [extract-manager:43] INFO - [INFO] Iniciando a movimentação dos arquivos de 'data\incoming' para 'data\processed'.
+2025-12-09 14:17:07 [extract-manager:63] INFO - [STATUS] 4 arquivos movidos de 'incoming' para 'processed'.
+2025-12-09 14:17:07 [extract-manager:89] INFO - [OK] O Pipeline de Extração foi concluído com sucesso! Total de DataFrames construídos: 4
+2025-12-09 14:17:19 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:17:19 [csv-transformer:138] WARNING - [AVISO] Cabeçalho não encontrado automaticamente, usando linha 3.
+2025-12-09 14:17:25 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (22701, 1)
+2025-12-09 14:17:25 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:17:25 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:17:25 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:17:25 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:17:25 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:17:25 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:17:25 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:17:25 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:17:25 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (22701, 1)
+2025-12-09 14:17:25 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:17:25 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: BD_Execucao dos RAP.xlsx
+2025-12-09 14:17:25 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+       Filtro do relatório:
+0                      2023
+1                      2023
+2                      2023
+3                      2023
+4                      2023
+...                     ...
+22696                  2025
+22697                  2025
+22698                  2025
+22699                  2025
+22700                  2025
+
+[22701 rows x 1 columns]
+2025-12-09 14:17:25 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:17:25 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:17:29 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (83831, 8)
+2025-12-09 14:17:29 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:17:29 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:17:30 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:17:30 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:17:30 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:17:30 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:17:31 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:17:31 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:17:31 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (83831, 8)
+2025-12-09 14:17:31 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:17:31 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:17:31 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+       Ano Lançamento      OB - Lista Credores  OB/LC - Sequencial  OB/LC - Favorecido           PI Mês Lançamento  OB/LC - Valor  Movim. Líquido - R$ (Conta Contábil)
+0                2025  153065152312024LC404139                 1.0        1.055204e+10  M0000G21B3N       JAN/2025          700.0                             1120000.0
+1                2025                     <NA>                 2.0        9.290461e+09  M0000G21B3N       JAN/2025          700.0                             1120000.0
+2                2025                     <NA>                 3.0        1.808975e+09  M0000G21B3N       JAN/2025          700.0                             1120000.0
+3                2025                     <NA>                 4.0        1.186760e+10  M0000G21B3N       JAN/2025          700.0                             1120000.0
+4                2025                     <NA>                 5.0        1.026962e+10  M0000G21B3N       JAN/2025          700.0                             1120000.0
+...               ...                      ...                 ...                 ...          ...            ...            ...                                   ...
+83826            2025                     <NA>                15.0        7.792610e+09  L0000P01N0N       OUT/2025           40.0                               14440.0
+83827            2025                     <NA>                16.0        2.757522e+10  L0000P01N0N       OUT/2025           40.0                               14440.0
+83828            2025                     <NA>                17.0        2.757522e+10  L0000P01N0N       OUT/2025           40.0                               14440.0
+83829            2025                     <NA>                18.0        2.757522e+10  L0000P01N0N       OUT/2025           40.0                               14440.0
+83830            2025                     <NA>                19.0        5.275863e+09  L0000P01N0N       OUT/2025           40.0                               14440.0
+
+[83831 rows x 8 columns]
+2025-12-09 14:17:31 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:17:31 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:17:34 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (25790, 15)
+2025-12-09 14:17:34 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:17:34 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:17:34 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:17:34 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:17:35 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:17:35 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:17:35 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:17:35 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:17:35 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (25790, 15)
+2025-12-09 14:17:35 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:17:35 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:17:35 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+       Ano Lançamento  Unidade Orçamentária  Resultado Primário Lei Ação Governo  Plano Orçamentário  UG Executora  UG Responsável  ...  Natureza Despesa Detalhada Item Informação    13    19    23    25    28
+0                2020               26240.0                     2.0         <NA>             26240.0      153065.0          150654  ...                        <NA>               6  2426  6537  7578  5663  5496
+1                2020               26240.0                     2.0         <NA>             26240.0      153065.0          150654  ...                        <NA>               6  2427  6538  7579  5664  5497
+2                2025               26240.0                     2.0         4256             26240.0      153065.0          150656  ...                    339020-9              -9     0  5193    22     0     0
+3                2025               26240.0                     2.0         4256             26240.0      153065.0          150656  ...                    339020-9               8     0  1297    22     0     0
+4                2025               26240.0                     2.0         4256             26240.0      153065.0          150656  ...                    33902001              -9     0  3435    22  4205  4101
+...               ...                   ...                     ...          ...                 ...           ...             ...  ...                         ...             ...   ...   ...   ...   ...   ...
+25785            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    339048-9              -9     0  5202    22     0     0
+25786            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    339048-9               8     0  1285    22     0     0
+25787            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    33904801              -9     0  3435    22  3313  3248
+25788            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    33904801               8     0  3435  5734     0     0
+25789            2015               26240.0                     2.0         210T             26240.0      153065.0          150656  ...                    339147-9              -9     0  3435    22     0     0
+
+[25790 rows x 15 columns]
+2025-12-09 14:17:35 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:17:35 [csv-transformer:125] INFO - [STATUS] Carregando arquivo..: data\processed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:17:35 [csv-transformer:154] INFO - [OK] Arquivo carregado e normalizado. Dimensões: (3717, 7)
+2025-12-09 14:17:35 [csv-transformer:532] INFO - [INFO] Iniciando o pipeline completo de transformações...
+2025-12-09 14:17:35 [csv-transformer:52] INFO - [OK] Cabeçalhos harmonizados com sucesso.
+2025-12-09 14:17:35 [csv-transformer:178] INFO - [OK] Limpeza e padronização de conteúdo de texto concluída.
+2025-12-09 14:17:35 [csv-transformer:114] INFO - [INFO] Nenhuma coluna chave para ffill() identificada.
+2025-12-09 14:17:35 [csv-transformer:237] INFO - [OK] Conversão de tipos concluída, utilizando tipos nulos (Int64) para robustez.
+2025-12-09 14:17:35 [csv-transformer:202] INFO - -> Colunas de Domínio PI não encontradas. Pulando Regras Específicas.
+2025-12-09 14:17:35 [csv-transformer:360] INFO - --- Iniciando Criação de Variáveis (Feature Engineering) ---
+2025-12-09 14:17:35 [csv-transformer:367] INFO - Nenhuma coluna do tipo datetime64 encontrada para Feature Engineering.
+2025-12-09 14:17:35 [csv-transformer:566] INFO - [OK] Pipeline de transformações concluído. Shape final: (3717, 7)
+2025-12-09 14:17:35 [csv-transformer:519] INFO - [OK] Arquivo original movido para: data\transformed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:17:35 [test-transformer:28] INFO - [SUCESSO] Transformação concluída: Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:17:35 [test-transformer:29] INFO - [DATAFRAME RESULTANTE]
+      Ano Lançamento Mês Lançamento  Resultado Lei Ação Governo  Item Informação   13    23
+0               2020           <NA>              2         <NA>                3  0.0  1997
+1               2020           <NA>              2         <NA>                3  0.0  1998
+2               2025       JAN/2025              0         09HB                1  0.0  1977
+3               2025       JAN/2025              1         00S6                1  0.0    97
+4               2025       JAN/2025              1         0181                1  0.0  1981
+...              ...            ...            ...          ...              ...  ...   ...
+3712            2015       014/2015              2         4572                4  0.0    97
+3713            2015       014/2015              2         4572                3  0.0    97
+3714            2015       014/2015              2         8282                4  0.0    97
+3715            2015       014/2015              2         8282                3  0.0    97
+3716            2015       014/2015              6         8282                4  0.0    97
+
+[3717 rows x 7 columns]
+2025-12-09 14:17:35 [test-transformer:34] INFO - [OK] Arquivo transformado está na pasta transformed: ./data/transformed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:17:35 [test-transformer:41] INFO - [INFO] Teste de transformação concluído.
+2025-12-09 14:18:03 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\BD_Execucao dos RAP.xlsx
+2025-12-09 14:18:09 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (53 colunas processadas).
+2025-12-09 14:18:09 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\BD_Execucao dos RAP.json
+2025-12-09 14:18:09 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\relatorio-auxilio-estudantil.xlsx
+2025-12-09 14:18:14 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (10 colunas processadas).
+2025-12-09 14:18:14 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\relatorio-auxilio-estudantil.json
+2025-12-09 14:18:14 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\Relatório painel orçamentário - Despesas.xlsx
+2025-12-09 14:18:18 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (29 colunas processadas).
+2025-12-09 14:18:18 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\Relatório painel orçamentário - Despesas.json
+2025-12-09 14:18:18 [json-loader:59] INFO - [STATUS] Carregando arquivo: data\transformed\Relatório painel orçamentário - Histórico.xlsx
+2025-12-09 14:18:18 [json-loader:44] INFO - [OK] Cabeçalhos harmonizados (10 colunas processadas).
+2025-12-09 14:18:18 [json-loader:80] INFO - [OK] Arquivo convertido para JSON: etl\load\Relatório painel orçamentário - Histórico.json
